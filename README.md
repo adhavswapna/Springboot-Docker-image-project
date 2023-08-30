@@ -32,35 +32,18 @@ Import the project into Vscode.
 
 In the src/main/java/com/swapna/springbootdemo/SpringbootDemoApplication.java directory 
 
-Java code-:
-
-package com.swapna.springbootdemo;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-public class SpringbootDemoApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootDemoApplication.class, args);
-	}
-
-}
-@RestController
-class HelloController {
-
-	@GetMapping("/")
-	public String index() {
-		return "Greetings from Swapna & Welcome to Spring Boot World!";
-	}
-
-}
 Run the Application:
 ./mvnw spring-boot:run
 on terminal -curl http://localhost:8080
 
 & also type on browser http://localhost:8080
 Done!
+
+created Dockerfile in springboot-demo folder
+mvn clean pacage command- to create jar file inside target folder
+
+
+docker build -t image-name:tag
+docker run -p 8080:8080 image-name:tag
+docker tag "docker image id" registry username/image name
+docker push registry username/image name
